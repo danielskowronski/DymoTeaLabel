@@ -3,6 +3,8 @@ Webform to quickly generate Dymo Label Printer files (and print them) for tea ca
 
 You'll need full **Dymo Label** software installed on Windows or macOS and **DYMO.DLS.Printing.Host.exe** running (should be by default).
 
+![Demo](demo.png)
+
 ## Current assumptions that will be changed to user selectables some day
 - 1/2" tape (D1)
 - fixed 8mm width of printout
