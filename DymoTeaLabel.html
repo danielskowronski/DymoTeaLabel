@@ -4,7 +4,6 @@ PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPENvbnRpbnVvdXNMYWJlbCBWZXJz
 <script src="http://labelwriter.com/software/dls/sdk/js/DYMO.Label.Framework.3.0.js" type="text/javascript" charset="UTF-8"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
 <script>
-	APIACCESS="replaceme"
 	dymo.label.framework.init(init);
 	printerName="";
 	canPrint=false;
@@ -25,10 +24,11 @@ PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPENvbnRpbnVvdXNMYWJlbCBWZXJz
 	function getShortUrl(){
 		var localResult="";
 		jQuery.ajax({
-			url: "http://api.bit.ly/v3/shorten?"+APIACCESS+"&longUrl="+document.getElementById("URL").value+"&format=json",
+			url: "https://cors-anywhere.herokuapp.com/http://ujeb.se/a/add?u="+document.getElementById("URL").value,
 			success: function (result) {
-				localResult=result.data.url;
+				localResult=result;
 			},
+			crossDomain: true,
 			async: false
 		});
 		return localResult;
