@@ -31,7 +31,7 @@
 					<TextFont Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
 					<CheckSumFont Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
 					<TextEmbedding>None</TextEmbedding>
-					<ECLevel>1</ECLevel>
+					<ECLevel>0</ECLevel>
 					<HorizontalAlignment>Center</HorizontalAlignment>
 					<QuietZonesPadding Left="0" Top="0" Right="0" Bottom="0" />
 				</BarcodeObject>

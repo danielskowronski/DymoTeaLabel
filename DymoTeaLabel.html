@@ -96,13 +96,13 @@
 				var paramsXml = dymo.label.framework.createTapePrintParamsXml ({ copies: 1 });
 				var labelSetXml = new dymo.label.framework.LabelSetBuilder();
 				var record = labelSetXml.addRecord();
-				record.setText("", "");
+				record.setText("a", "a");
 			}
 			else {
 				var paramsXml = dymo.label.framework.createLabelWriterPrintParamsXml  ({ copies: 1 });
 				var labelSetXml = new dymo.label.framework.LabelSetBuilder();
 				var record = labelSetXml.addRecord();
-				record.setText("", "");
+				record.setText("a", "a");
 			}
 			dymo.label.framework.printLabel($("#printerName").val(), paramsXml, labelXml, labelSetXml);
 		} 
