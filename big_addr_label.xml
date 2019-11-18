@@ -29,7 +29,7 @@
 			<HorizontalAlignment>Left</HorizontalAlignment>
 			<QuietZonesPadding Left="0" Top="0" Right="0" Bottom="0" />
 		</BarcodeObject>
-		<Bounds X="322" Y="57.9999999999999" Width="742.5" Height="1882" />
+		<Bounds X="800" Y="0" Width="750" Height="2000" />
 	</ObjectInfo>
 	<ObjectInfo>
 		<TextObject>
@@ -89,6 +89,6 @@
 				</Element>
 			</StyledText>
 		</TextObject>
-		<Bounds X="1180" Y="200" Width="3755" Height="1762.5" />
+		<Bounds X="1700" Y="200" Width="3755" Height="1762.5" />
 	</ObjectInfo>
 </DieCutLabel>
