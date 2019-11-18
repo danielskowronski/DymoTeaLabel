@@ -5,11 +5,14 @@ You'll need full **Dymo Label** software installed on Windows or macOS and **DYM
 
 ![Demo](demo.png)
 
-## Current assumptions that will be changed to user selectables some day
-- 1/2" tape (D1)
-- fixed 8mm width of printout
-- static template
-- printing on first printer found
-
-## bit.ly
-As max width of D1 cartridge is 1/2" therefore QR code can't be very detailed, so input URL must be short. Therefore one need to use bit.ly or similar service. bit.ly requires `APIACCESS` to be set correctly in html file (in form of `login=LOGIN&apiKey=TOKEN`).
+## Templates - adding new one
+1. Dump template from *Dymo Label* and save in location accessible to directory with html
+2. Add new filename to `select` with id `templateFile` 
+3. Use following template tokens in XML/`.label` file - they are simply replaced with values from form:
+   - `teaName`
+   - `brTemp` (brewing temp)
+   - `brTime` (brewing time)
+   - `teaType`
+   - `info1` (top line)
+   - `info2` (bottom line)
+   - `TOKEN_URL` (URL)
