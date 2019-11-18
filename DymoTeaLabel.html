@@ -45,6 +45,7 @@
 			success: function (result) {
 				localResult=new XMLSerializer().serializeToString(result);
 			},
+			crossDomain: true,
 			async: false
 		});
 		return localResult;
