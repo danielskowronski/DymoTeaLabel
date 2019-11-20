@@ -27,6 +27,8 @@
 		canPrint=true;
 	}
 	function getShortUrl(){
+		if (document.getElementById("URL").value=="") return "http://skowron.ski";
+		
 		var localResult="";
 		jQuery.ajax({
 			url: "https://cors-anywhere.herokuapp.com/http://ujeb.se/a/add?u="+document.getElementById("URL").value,
@@ -60,6 +62,9 @@
 				replace("teaType",escapeHtml(document.getElementById("teaType").value)).
 				replace("info1",escapeHtml(document.getElementById("info1").value)).
 				replace("info2",escapeHtml(document.getElementById("info2").value)).
+				replace("<String>°C / min","<String>&#x2800;"). //small hack for empty brew time and brew temp
+				replace("<String>°C / ","<String>").    //small hack for empty brew temp only
+				replace("°C / min","°C").               //small hack for empty brew time only
 				replace("TOKEN_URL",escapeHtml(shorturl));
 		} 
 		catch (e){
@@ -140,7 +145,7 @@
 		<tr><td class="tableDesc"><b>Name</b></td><td><input type="text" id="teaName"></td></tr>
 		<tr><td class="tableDesc"><b>Brew temperature</b></td><td><input type="text" id="brTemp"></td></tr>
 		<tr><td class="tableDesc"><b>Brew time</b></td><td><input type="text" id="brTime"></td></tr>
-		<tr><td class="tableDesc">URL</td><td><input type="text" id="URL"></td></tr>
+		<tr><td class="tableDesc"><b>URL</b></td><td><input type="text" id="URL"></td></tr>
 		
 		<tr><td><br /><i>Only for large label:</i></td><td></td></tr>
 		<tr><td class="tableDesc"><b>Type</b></td><td><input type="text" id="teaType"></td></tr>
